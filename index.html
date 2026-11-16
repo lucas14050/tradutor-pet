@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradutor de Pets 🐶 | O que seu cachorro está dizendo?</title>
+  <meta name="description" content="Um tradutor divertido e fictício de latidos de cachorros. Grave o latido do seu pet e decodifique seus pensamentos mais hilários!">
+  
+  <!-- Favicon com SVG de Patinha -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐶</text></svg>">
+  
+  <!-- Google Fonts: Fredoka & Nunito -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Patinhas decorativas de fundo -->
+  <div class="paw-decorations" aria-hidden="true">
+    <span class="floating-paw p1">🐾</span>
+    <span class="floating-paw p2">🐾</span>
+    <span class="floating-paw p3">🐾</span>
+    <span class="floating-paw p4">🐾</span>
+    <span class="floating-paw p5">🐾</span>
+  </div>
+
+  <!-- 1. CABEÇALHO -->
+  <header class="navbar" id="topo">
+    <div class="container nav-content">
+      <a href="#topo" class="logo" aria-label="Tradutor de Pets - Início">
+        <div class="logo-icon">
+          <!-- Ícone SVG de cachorro com sorriso amigável -->
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" class="dog-svg-logo">
+            <ellipse cx="32" cy="38" rx="22" ry="18" fill="#FFB703"/>
+            <!-- Orelha esquerda -->
+            <path d="M14 26C11 15 16 10 22 18L24 28C19 30 15 28 14 26Z" fill="#FB8500"/>
+            <!-- Orelha direita -->
+            <path d="M50 26C53 15 48 10 42 18L40 28C45 30 49 28 50 26Z" fill="#FB8500"/>
+            <!-- Mancha no olho -->
+            <ellipse cx="23" cy="34" rx="7" ry="8" fill="#FFF3BF"/>
+            <!-- Olhos -->
+            <circle cx="23" cy="34" r="3.5" fill="#2B2D42"/>
+            <circle cx="24.5" cy="32.5" r="1.2" fill="#FFFFFF"/>
+            <circle cx="41" cy="34" r="3.5" fill="#2B2D42"/>
+            <circle cx="42.5" cy="32.5" r="1.2" fill="#FFFFFF"/>
+            <!-- Focinho -->
+            <ellipse cx="32" cy="41" rx="10" ry="7" fill="#FFFFFF"/>
+            <path d="M28 39C28 37.5 36 37.5 36 39C36 41 33.5 43 32 43C30.5 43 28 41 28 39Z" fill="#2B2D42"/>
+            <!-- Sorriso -->
+            <path d="M28 44C30 46 34 46 36 44" stroke="#2B2D42" stroke-width="2" stroke-linecap="round"/>
+            <path d="M32 43V45" stroke="#2B2D42" stroke-width="2"/>
+            <path d="M30 46C31 49 33 49 34 46" fill="#FF70A6"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">Tradutor de Pets</span>
+          <span class="brand-badge">IA Canina ✨</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navegação -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#tradutor" class="nav-link">Gravador</a>
+        <a href="#como-funciona" class="nav-link">Como funciona</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+      </nav>
+
+      <!-- Botão de Ação Rápida no Topo & Hambúrguer Mobile -->
+      <div class="nav-actions">
+        <a href="#tradutor" class="btn btn-sm btn-primary hide-mobile">
+          <span>Ouvir Pet</span> 🎙️
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. PÁGINA INICIAL (HERO) -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="pill-tag">
+            <span class="pulse-dot"></span>
+            <span>Tecnologia 100% fictícia & 1000% divertida</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Seu cachorro está falando.<br>
+            <span class="highlight-text">Você está entendendo?</span>
+          </h1>
+          
+          <p class="hero-subtitle">
+            Grave um latido e descubra o que seu melhor amigo está tentando dizer! Decodifique os maiores segredos, cobranças de petiscos e conspirações contra o aspirador de pó.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#tradutor" class="btn btn-lg btn-primary shadow-bounce">
+              <span class="btn-icon">🐶</span>
+              <span>Traduzir latido</span>
+            </a>
+            <a href="#como-funciona" class="btn btn-lg btn-outline">
+              <span>Como funciona</span> 🦴
+            </a>
+          </div>
+
+          <!-- Métricas divertidas -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">+85.000</span>
+              <span class="stat-label">Latidos decodificados</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">99.9%</span>
+              <span class="stat-label">Exigência de petiscos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">0</span>
+              <span class="stat-label">Carteiros perdoados</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ilustração Hero Interativa -->
+        <div class="hero-image-wrapper">
+          <div class="dog-hero-card">
+            <!-- Balão de pensamento interativo -->
+            <div class="speech-bubble" id="heroBubble">
+              <span class="bubble-tag">Pensamento atual:</span>
+              <p class="bubble-text" id="heroBubbleText">"Se você jogar a bolinha de novo, eu vou trazer de volta... ou talvez não! 🎾"</p>
+              <div class="bubble-tail"></div>
+            </div>
+
+            <!-- Ilustração SVG Rica do Cachorro -->
+            <div class="dog-illustration-container">
+              <svg viewBox="0 0 320 300" class="hero-dog-svg" xmlns="http://www.w3.org/2000/svg">
+                <!-- Sombra no chão -->
+                <ellipse cx="160" cy="275" rx="100" ry="18" fill="rgba(0,0,0,0.08)"/>
+                
+                <!-- Rabo abanando animado -->
+                <path id="wagging-tail" d="M220 220 C270 200 290 140 270 120 C250 100 240 140 220 180" 
+                      fill="none" stroke="#FB8500" stroke-width="26" stroke-linecap="round"/>
+                
+                <!-- Corpo -->
+                <ellipse cx="160" cy="195" rx="75" ry="65" fill="#FFB703"/>
+                <!-- Peito clarinho -->
+                <ellipse cx="150" cy="210" rx="42" ry="46" fill="#FFF3BF"/>
+
+                <!-- Patinhas dianteiras -->
+                <rect x="115" y="215" width="28" height="55" rx="14" fill="#FFB703"/>
+                <circle cx="129" cy="265" r="15" fill="#FB8500"/>
+                
+                <rect x="165" y="215" width="28" height="55" rx="14" fill="#FFB703"/>
+                <circle cx="179" cy="265" r="15" fill="#FB8500"/>
+
+                <!-- Coleira azul com medalhinha de osso -->
+                <path d="M108 148 C135 166 175 166 202 148" stroke="#00B4D8" stroke-width="14" stroke-linecap="round"/>
+                <circle cx="155" cy="164" r="9" fill="#FFD166" stroke="#E0A96D" stroke-width="2"/>
+                <text x="155" y="167" font-size="10" text-anchor="middle" fill="#5F4B32">🦴</text>
+
+                <!-- Cabeça -->
+                <circle cx="155" cy="115" r="55" fill="#FFB703"/>
+                
+                <!-- Orelhas com animação -->
+                <path id="left-ear" d="M110 95 C80 65 85 135 105 145 C115 150 125 125 110 95 Z" fill="#FB8500"/>
+                <path id="right-ear" d="M200 95 C230 65 225 135 205 145 C195 150 185 125 200 95 Z" fill="#FB8500"/>
+
+                <!-- Mancha charmosa no olho direito -->
+                <ellipse cx="178" cy="110" rx="18" ry="20" fill="#FFF3BF" transform="rotate(10 178 110)"/>
+
+                <!-- Olhos expressivos e brilhantes -->
+                <ellipse cx="132" cy="108" rx="8" ry="10" fill="#2B2D42"/>
+                <circle cx="135" cy="104" r="3.5" fill="#FFFFFF"/>
+                <circle cx="130" cy="112" r="1.5" fill="#FFFFFF"/>
+
+                <ellipse cx="178" cy="108" rx="8" ry="10" fill="#2B2D42"/>
+                <circle cx="181" cy="104" r="3.5" fill="#FFFFFF"/>
+                <circle cx="176" cy="112" r="1.5" fill="#FFFFFF"/>
+
+                <!-- Sobrancelhas fofas -->
+                <path d="M125 93 Q132 89 140 92" stroke="#B05B00" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <path d="M170 92 Q178 89 185 93" stroke="#B05B00" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+                <!-- Focinho -->
+                <ellipse cx="155" cy="128" rx="26" ry="18" fill="#FFFFFF"/>
+                <path d="M144 122 C144 117 166 117 166 122 C166 128 158 133 155 133 C152 133 144 128 144 122 Z" fill="#2B2D42"/>
+                <circle cx="153" cy="121" r="2" fill="#FFFFFF" opacity="0.7"/>
+
+                <!-- Boca / Língua -->
+                <path d="M148 134 Q155 139 162 134" stroke="#2B2D42" stroke-width="3" stroke-linecap="round" fill="none"/>
+                <!-- Língua feliz para fora -->
+                <path d="M150 137 C150 148 160 148 160 137 Z" fill="#FF70A6"/>
+                <line x1="155" y1="137" x2="155" y2="143" stroke="#E63946" stroke-width="1.5"/>
+
+                <!-- Bochechinhas rosadas -->
+                <circle cx="120" cy="125" r="9" fill="#FF70A6" opacity="0.35"/>
+                <circle cx="190" cy="125" r="9" fill="#FF70A6" opacity="0.35"/>
+              </svg>
+            </div>
+
+            <!-- Botãozinho interativo de clique no cão -->
+            <button class="pet-poke-btn" id="pokeDogBtn" title="Clique no cachorro para ele latir!">
+              🐾 Faça um carinho nele!
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 & 4. SEÇÃO DO GRAVADOR & TRADUÇÃO -->
+    <section class="recorder-section" id="tradutor">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="sub-badge">CENTRAL DE DECODIFICAÇÃO</span>
+          <h2 class="section-title">Laboratório de Tradução Canina 🐕🔬</h2>
+          <p class="section-desc">
+            Use o microfone para capturar o latido ao vivo ou faça upload de um arquivo de áudio.
+          </p>
+        </div>
+
+        <!-- Card Principal da Aplicação -->
+        <div class="translator-app-box">
+          
+          <!-- Seletor de Modo: Gravar ao Vivo vs Enviar Arquivo -->
+          <div class="mode-tabs" role="tablist">
+            <button class="tab-btn active" id="tabRecord" role="tab" aria-selected="true" aria-controls="panelRecord">
+              <span class="tab-icon">🎙️</span> Gravar Microfone
+            </button>
+            <button class="tab-btn" id="tabUpload" role="tab" aria-selected="false" aria-controls="panelUpload">
+              <span class="tab-icon">📁</span> Enviar Áudio
+            </button>
+            <button class="tab-btn demo-btn" id="btnDemoBark" title="Não tem microfone agora? Simule um latido!">
+              <span class="tab-icon">✨</span> Latido de Exemplo
+            </button>
+          </div>
+
+          <!-- ÁREA DO GRAVADOR (MODO 1: MICROFONE) -->
+          <div class="tab-panel active" id="panelRecord" role="tabpanel">
+            <div class="recorder-interface">
+              
+              <!-- Anel e Efeito de Onda Visual de Gravação -->
+              <div class="recorder-visual-wrap">
+                <div class="pulse-ring r1" id="pulseRing1"></div>
+                <div class="pulse-ring r2" id="pulseRing2"></div>
+                <div class="pulse-ring r3" id="pulseRing3"></div>
+
+                <button class="mic-main-button" id="recordBtn" aria-label="Iniciar gravação de latido">
+                  <span class="mic-inner-circle">
+                    <!-- Ícone microfone SVG -->
+                    <svg id="micIcon" viewBox="0 0 24 24" class="mic-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                      <line x1="12" y1="19" x2="12" y2="22"></line>
+                    </svg>
+                    <!-- Ícone de parar (quadradinho) escondido -->
+                    <span id="stopIcon" class="stop-box hidden"></span>
+                  </span>
+                </button>
+              </div>
+
+              <!-- Status e Temporizador -->
+              <div class="recorder-meta">
+                <div class="timer-display" id="recordTimer">00:00</div>
+                <div class="status-indicator">
+                  <span class="status-dot" id="statusDot"></span>
+                  <span class="status-text" id="statusText">Pronto para escutar seu doguinho</span>
+                </div>
+              </div>
+
+              <!-- Canvas Visualizador de Ondas de Áudio em Tempo Real -->
+              <div class="audio-waves-container">
+                <canvas id="waveformCanvas" width="340" height="60" aria-label="Ondas sonoras"></canvas>
+                <div class="simulated-wave-bars" id="simulatedWaves">
+                  <div class="bar b1"></div>
+                  <div class="bar b2"></div>
+                  <div class="bar b3"></div>
+                  <div class="bar b4"></div>
+                  <div class="bar b5"></div>
+                  <div class="bar b6"></div>
+                  <div class="bar b7"></div>
+                  <div class="bar b8"></div>
+                  <div class="bar b9"></div>
+                </div>
+              </div>
+
+              <div class="recorder-instructions">
+                <p>Toque no botão laranja grande, deixe seu cãozinho latir e toque novamente para traduzir!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ÁREA DE UPLOAD (MODO 2: ARQUIVO) -->
+          <div class="tab-panel" id="panelUpload" role="tabpanel">
+            <div class="upload-dropzone" id="dropzone">
+              <input type="file" id="audioFileInput" accept="audio/*,.mp3,.wav,.ogg,.m4a,.aac" class="file-input-hidden">
+              <div class="dropzone-content">
+                <div class="dropzone-icon">🎵</div>
+                <h3 class="dropzone-title">Arraste seu arquivo de latido aqui</h3>
+                <p class="dropzone-subtitle">ou clique para escolher um áudio do computador ou celular</p>
+                <div class="dropzone-formats">Formatos aceitos: MP3, WAV, OGG, M4A</div>
+                <button type="button" class="btn btn-md btn-secondary" id="browseFileBtn">
+                  <span>Selecionar Arquivo</span> 📂
+                </button>
+              </div>
+
+              <!-- Pré-visualização do Arquivo Escolhido -->
+              <div class="selected-file-info hidden" id="fileInfoBox">
+                <div class="file-icon-name">
+                  <span class="file-symbol">📄</span>
+                  <div class="file-details">
+                    <span class="file-name" id="fileNameDisplay">meu_cachorro.mp3</span>
+                    <span class="file-size" id="fileSizeDisplay">1.2 MB</span>
+                  </div>
+                </div>
+                <button type="button" class="btn-clear-file" id="clearFileBtn" title="Remover arquivo">✕</button>
+                <button type="button" class="btn btn-primary btn-md mt-3 w-100" id="btnTranslateUploaded">
+                  <span>🐶 Processar e Traduzir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tocador de áudio gravado / enviado (feedback sonoro) -->
+          <div class="audio-playback-preview hidden" id="audioPlaybackBox">
+            <div class="audio-preview-header">
+              <span>🔊 Áudio gravado:</span>
+              <button class="btn-text-only" id="btnDiscardAudio">Descartar</button>
+            </div>
+            <audio id="audioPlayer" controls class="custom-audio-control"></audio>
+          </div>
+
+          <!-- 4. TELA DE CARREGAMENTO / ANIMAÇÃO DE ANÁLISE -->
+          <div class="analysis-loading-box hidden" id="analysisBox" aria-live="polite">
+            <div class="bone-spinner-wrap">
+              <div class="paw-orbit-spinner">
+                <span class="orbit-paw p-a">🐾</span>
+                <span class="orbit-paw p-b">🐾</span>
+                <span class="orbit-paw p-c">🐾</span>
+              </div>
+              <div class="center-dog-emoji">🐕</div>
+            </div>
+
+            <h3 class="analysis-title" id="analysisTitle">Analisando pensamentos caninos...</h3>
+            
+            <div class="analysis-progress-container">
+              <div class="analysis-progress-bar" id="analysisProgressBar"></div>
+            </div>
+
+            <p class="analysis-step-text" id="analysisStepText">
+              Decodificando frequências ultrassônicas de au-au...
+            </p>
+          </div>
+
+          <!-- 4. CARD DE RESULTADO DA TRADUÇÃO -->
+          <div class="translation-result-box hidden" id="resultCard" aria-live="polite">
+            <div class="card-confetti" id="confettiContainer" aria-hidden="true"></div>
+            
+            <div class="result-header">
+              <div class="dog-avatar-badge">
+                <span class="avatar-emoji" id="dogAvatarEmoji">🐕</span>
+              </div>
+              <div class="result-meta">
+                <span class="badge-mood" id="dogMoodBadge">🔥 Nível de Emergência: Máximo</span>
+                <span class="time-stamp" id="resultTimestamp">Agora mesmo</span>
+              </div>
+            </div>
+
+            <!-- A Tradução Misteriosa e Hilária -->
+            <div class="translation-quote-container">
+              <span class="quote-mark q-left">“</span>
+              <blockquote class="translation-quote-text" id="translationText">
+                Meu pote está vazio! Isso é uma emergência!
+              </blockquote>
+              <span class="quote-mark q-right">”</span>
+            </div>
+
+            <!-- Ficha Técnica Canina Engraçada -->
+            <div class="dog-metrics-grid">
+              <div class="metric-pill">
+                <span class="metric-emoji">🍖</span>
+                <div class="metric-info">
+                  <span class="metric-label">Vontade de Petisco</span>
+                  <span class="metric-val" id="metricTreat">100%</span>
+                </div>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-emoji">🎭</span>
+                <div class="metric-info">
+                  <span class="metric-label">Índice de Drama</span>
+                  <span class="metric-val" id="metricDrama">98.4%</span>
+                </div>
+              </div>
+              <div class="metric-pill">
+                <span class="metric-emoji">📦</span>
+                <div class="metric-info">
+                  <span class="metric-label">Alvo Provável</span>
+                  <span class="metric-val" id="metricTarget">Entregador</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botões de Ação do Resultado -->
+            <div class="result-actions-group">
+              <button class="btn btn-secondary btn-action" id="btnCopyTranslation">
+                <span class="action-icon">📋</span>
+                <span id="copyBtnText">Copiar tradução</span>
+              </button>
+
+              <button class="btn btn-secondary btn-action" id="btnSpeakTranslation" title="Ouvir em voz alta">
+                <span class="action-icon">🔊</span>
+                <span>Ouvir voz</span>
+              </button>
+
+              <button class="btn btn-primary btn-action" id="btnTranslateAgain">
+                <span class="action-icon">🔄</span>
+                <span>Traduzir novamente</span>
+              </button>
+            </div>
+
+            <!-- Nota de humor canino -->
+            <div class="disclaimer-note">
+              <span>⚠️ <strong>Aviso aos humanos:</strong> Tradução 100% gerada pelo algoritmo de zoeira canina. Não substitua carinho real por suposições de IA!</span>
+            </div>
+          </div>
+
+        </div> <!-- /translator-app-box -->
+
+      </div>
+    </section>
+
+    <!-- 5. COMO FUNCIONA -->
+    <section class="how-it-works-section" id="como-funciona">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="sub-badge">PASSO A PASSO</span>
+          <h2 class="section-title">Como a mágica acontece? ✨</h2>
+          <p class="section-desc">
+            Três passos ultrassimples para desvendar a mente do seu parceiro de quatro patas.
+          </p>
+        </div>
+
+        <div class="steps-grid">
+          <!-- Passo 1 -->
+          <div class="step-card">
+            <div class="step-badge">Passo 01</div>
+            <div class="step-icon-bubble bg-pastel-yellow">
+              <span class="step-emoji">🎙️</span>
+            </div>
+            <h3 class="step-title">Grave o latido</h3>
+            <p class="step-text">
+              Aperte o botão do microfone quando seu pet latir ou faça o upload de uma gravação que você guardou no celular.
+            </p>
+            <div class="step-tip">Dica: Latidos de empolgação geram as melhores pérolas!</div>
+          </div>
+
+          <!-- Passo 2 -->
+          <div class="step-card featured">
+            <div class="step-badge">Passo 02</div>
+            <div class="step-icon-bubble bg-pastel-blue">
+              <span class="step-emoji">🧠</span>
+            </div>
+            <h3 class="step-title">Nossa inteligência canina analisa</h3>
+            <p class="step-text">
+              Cruzamos decibéis, modulação do rabo, histórico de lambidas e o índice de fome no nosso banco de dados cósmico.
+            </p>
+            <div class="step-tip">Processamento rápido com direito a teorias absurdas.</div>
+          </div>
+
+          <!-- Passo 3 -->
+          <div class="step-card">
+            <div class="step-badge">Passo 03</div>
+            <div class="step-icon-bubble bg-pastel-orange">
+              <span class="step-emoji">💬</span>
+            </div>
+            <h3 class="step-title">Descubra a tradução!</h3>
+            <p class="step-text">
+              Receba o resultado hilário em português claro, copie o texto para mandar no WhatsApp da família ou ouça em voz alta!
+            </p>
+            <div class="step-tip">Garante boas risadas e petiscos extras para o dog.</div>
+          </div>
+        </div>
+
+        <!-- Call to action no final do como funciona -->
+        <div class="how-bottom-cta">
+          <a href="#tradutor" class="btn btn-lg btn-primary shadow-bounce">
+            <span>Experimentar agora</span> 🐾
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. SEÇÃO SOBRE & PRIVACIDADE -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-card">
+          <div class="about-header">
+            <div class="about-icon">🐶💡</div>
+            <div>
+              <h2 class="about-title">Sobre o Tradutor de Pets</h2>
+              <p class="about-tagline">Uma homenagem ao amor infinito e às carinhas fofas dos nossos cães.</p>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <p>
+              O <strong>Tradutor de Pets</strong> nasceu de uma dúvida que todo tutor já teve pelo menos uma dúzia de vezes por dia: <em>"O que diabos esse cachorro está tentando me falar latindo para o nada às duas da manhã?!"</em>
+            </p>
+            <p>
+              Este site é um projeto de humor e entretenimento. As traduções apresentadas são <strong>totalmente aleatórias, fictícias e bem-humoradas</strong>, criadas para divertir você, sua família e seus amigos enquanto passam tempo de qualidade com seus animais de estimação.
+            </p>
+          </div>
+
+          <!-- Selos de Segurança e Privacidade -->
+          <div class="privacy-badges-grid">
+            <div class="privacy-item">
+              <span class="p-icon">🔒</span>
+              <div>
+                <strong>Privacidade Total</strong>
+                <p>Nenhum áudio é salvo em servidores. Todo o processamento ocorre localmente no seu próprio navegador.</p>
+              </div>
+            </div>
+
+            <div class="privacy-item">
+              <span class="p-icon">✨</span>
+              <div>
+                <strong>100% Gratuito & Livre</strong>
+                <p>Sem cadastros chatos, sem assinaturas. Apenas diversão canina instantânea.</p>
+              </div>
+            </div>
+
+            <div class="privacy-item">
+              <span class="p-icon">❤️</span>
+              <div>
+                <strong>Amor aos Animais</strong>
+                <p>Respeite sempre o bem-estar do seu pet. Nunca o force ou assuste para conseguir um latido!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <span class="brand-name">🐶 Tradutor de Pets</span>
+        </div>
+        <p class="footer-phrase">
+          Feito com amor, petiscos e muita imaginação.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#tradutor">Gravador</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#sobre">Sobre o projeto</a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>© 2026 Tradutor de Pets. Todos os direitos reservados aos doguinhos folgados do mundo inteiro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast de Notificação (ex: "Tradução copiada!") -->
+  <div class="toast-notification hidden" id="toastNotification" role="alert" aria-live="assertive">
+    <span class="toast-icon" id="toastIcon">📋</span>
+    <span class="toast-message" id="toastMsg">Copiado para a área de transferência!</span>
+  </div>
+
+  <!-- Script Principal -->
+  <script src="script.js"></script>
+</body>
+</html>
